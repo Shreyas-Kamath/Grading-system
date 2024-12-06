@@ -10,4 +10,12 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 file(GLOB_RECURSE HEADERS "include/*.h")
 
 # Executable target
-add_executable(GradesAnalyserV2 ${SOURCES} ${HEADERS})
+
+include_directories(include)
+
+# Add the executable and source files
+add_executable(GradesAnalyserV2
+    src/main.cpp
+    src/Student.cpp
+    include/Student.h
+)

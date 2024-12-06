@@ -37,7 +37,7 @@ void write(const std::vector<Student>& students) {
 					<< static_cast<int>(student.get_chemistry()) << ','
 					<< static_cast<int>(student.get_maths()) << ','
 					<< student.get_avg() << ','
-					<< ((student.get_avg() >= PASSING_MARKS_JEE_ADV) ? QUALIFY_JEE_ADV : student.get_status() ? PASSED : FAIL)
+					<< ((student.get_avg() >= PASSING_MARKS_X_V2) ? QUALIFY_X_V2 : student.get_status() ? PASSED : FAIL)
 					<< '\n';
 			}
 		}
@@ -52,11 +52,11 @@ void generate_reports(const std::vector<Student>& students) {
 	std::filesystem::create_directory("INDIVIDUAL REPORTS");
 	std::filesystem::current_path("INDIVIDUAL REPORTS");
 	for (const Student& student : students) {
-		std::string status = ((student.get_avg() >= PASSING_MARKS_JEE_ADV) ? QUALIFY_JEE_ADV : student.get_status() ? PASSED : FAIL);
+		std::string status = ((student.get_avg() >= PASSING_MARKS_X_V2) ? QUALIFY_X_V2 : student.get_status() ? PASSED : FAIL);
 		std::string filename = student.get_name() + " - " + status+".txt";
 		std::ofstream file(filename, std::ios::trunc);
 		if (file.is_open()) {
-			if (status == QUALIFY_JEE_ADV) {
+			if (status == QUALIFY_X_V2) {
 				std::string write = std::format(pass_template_jee_adv, student.get_name(), student.get_maths(), student.get_physics(), student.get_chemistry(), student.get_avg(), student.get_status() ? PASSED:FAIL);
 				file << write;
 				file.close();

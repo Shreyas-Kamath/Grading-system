@@ -9,8 +9,8 @@
 #include <filesystem>
 
 #define PASSING_MARKS 32
-#define PASSING_MARKS_JEE_ADV 70
-#define QUALIFY_JEE_ADV "PASSED - QUALIFIED FOR X v2"
+#define PASSING_MARKS_X_V2 70
+#define QUALIFY_X_V2 "PASSED - QUALIFIED FOR X v2"
 #define PASSED "PASSED"
 #define FAIL "FAILED"
 
