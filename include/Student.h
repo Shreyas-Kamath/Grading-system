@@ -8,11 +8,11 @@
 #include <sstream>
 #include <filesystem>
 
-#define PASSING_MARKS 32
-#define PASSING_MARKS_X_V2 70
-#define QUALIFY_X_V2 "PASSED - QUALIFIED FOR X v2"
-#define PASSED "PASSED"
-#define FAIL "FAILED"
+inline constexpr const int PASSING_MARKS {32};
+inline constexpr const int PASSING_MARKS_X_V2 {70};
+inline constexpr const char* QUALIFY_X_V2 {"PASSED - QUALIFIED FOR X v2"};
+inline constexpr const char* PASSED {"PASSED"};
+inline constexpr const char* FAIL {"FAILED"};
 
 inline constexpr const char* pass_template_jee_adv =
 "Congratulations {}!\nYou have successfully cleared X examination.\nYour marks are as follows:\n MATHS : {}\n PHYSICS : {}\n CHEMISTRY : {}\n AVERAGE SCORE : {}\n STATUS: {}\nPlease note, you have also qualified for X v2 examination";
