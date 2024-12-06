@@ -1,5 +1,5 @@
 # Grading-system
-really unstable grading system
+somewhat stable grading system
 
 This program will read from a file containing records of students with Physics, Chemistry, Maths marks in CSV format and produce a results file and a folder containing individual reports.
 sample csv file is attached.
