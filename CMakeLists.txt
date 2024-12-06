@@ -15,7 +15,6 @@ include_directories(include)
 
 # Add the executable and source files
 add_executable(GradesAnalyserV2
-    src/main.cpp
-    src/Student.cpp
-    include/Student.h
+    ${SOURCES}
+    ${HEADERS}
 )
